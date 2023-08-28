@@ -1,8 +1,8 @@
 provider "aws" {
-  # alterado a declar.de region para utilizar workspaces	
+  # changed region declaration to use workspaces	
   #region  = "us-east-2"
   region = "${terraform.workspace == "production" ? "us-east-2" : "us-east-1"}"
-  # version foi substituida pelo arquivo version.tf
+  # version replaced by file version.tf
   #version = "~> 3.0"
 }
 
